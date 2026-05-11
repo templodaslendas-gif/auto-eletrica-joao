@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-white text-bosch-graphite font-sans;
+  }
+
+  ::selection {
+    @apply bg-bosch-red text-white;
+  }
+}
+
+@layer components {
+  .container-app {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-bosch-red px-6 py-3.5 font-semibold text-white shadow-lg shadow-bosch-red/20 transition-all duration-300 hover:bg-bosch-red-dark hover:shadow-xl hover:shadow-bosch-red/30 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-white/30 bg-white/10 px-6 py-3.5 font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-bosch-graphite hover:border-white;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] px-6 py-3.5 font-semibold text-white shadow-lg shadow-[#25D366]/20 transition-all duration-300 hover:bg-[#1faa54] hover:shadow-xl hover:shadow-[#25D366]/30 hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight text-bosch-graphite;
+  }
+
+  .section-subtitle {
+    @apply mt-4 text-base md:text-lg text-bosch-gray max-w-2xl;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-bosch-red;
+  }
+
+  .eyebrow::before {
+    content: '';
+    @apply inline-block h-px w-8 bg-bosch-red;
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl;
+  }
+
+  /* Reveal animation (controlado por IntersectionObserver) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar customizada (desktop) */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f4f5f7;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #003B5C;
+    border-radius: 5px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0073B5;
+  }
+}
