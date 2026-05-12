@@ -104,14 +104,22 @@ export default function Footer() {
         </div>
 
         {/* Linha de copyright */}
-        <div className="mt-14 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-14 pt-8 border-t border-white/10 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <p className="text-xs text-white/50 text-center md:text-left">
             © {year} {config.empresa.nome}. Todos os direitos reservados.
           </p>
-          <p className="text-xs text-white/40 flex items-center gap-2">
+          {/* Crédito FFR — clicável, alinhado à esquerda no mobile para não colidir com botão WhatsApp */}
+          <a
+            href="https://wa.me/5545999317831?text=Vim%20do%20site%20da%20Auto%20El%C3%A9trica%20e%20Mec%C3%A2nica%20do%20Jo%C3%A3o%2C%20quero%20falar%20com%20o%20respons%C3%A1vel%20pelo%20site."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-white/40 hover:text-white/70 transition-colors flex items-center gap-1.5 self-start md:self-auto pr-20 md:pr-0"
+          >
             Desenvolvido por{' '}
-            <span className="text-bosch-red font-semibold">FFR do Brasil Tecnology</span>
-          </p>
+            <span className="text-bosch-red font-semibold hover:text-red-400 transition-colors">
+              FFR do Brasil Tecnology
+            </span>
+          </a>
         </div>
       </div>
     </footer>
