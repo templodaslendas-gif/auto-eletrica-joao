@@ -104,16 +104,15 @@ export default function Footer() {
         </div>
 
         {/* Linha de copyright */}
-        <div className="mt-14 pt-8 border-t border-white/10 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-          <p className="text-xs text-white/50 text-center md:text-left">
+        <div className="mt-14 pt-8 border-t border-white/10 flex flex-col gap-2">
+          <p className="text-xs text-white/50">
             © {year} {config.empresa.nome}. Todos os direitos reservados.
           </p>
-          {/* Crédito FFR — clicável, alinhado à esquerda no mobile para não colidir com botão WhatsApp */}
           <a
             href={`https://wa.me/${config.ffr.whatsapp}?text=${encodeURIComponent(config.ffr.mensagem(config.empresa.nome))}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-white/40 hover:text-white/70 transition-colors flex items-center gap-1.5 self-start md:self-auto pr-20 md:pr-0"
+            className="text-xs text-white/40 hover:text-white/70 transition-colors flex items-center gap-1.5"
           >
             Desenvolvido por{' '}
             <span className="text-bosch-red font-semibold hover:text-red-400 transition-colors">
