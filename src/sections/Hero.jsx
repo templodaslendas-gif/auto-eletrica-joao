@@ -63,14 +63,12 @@ export default function Hero() {
               href={whatsappLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative inline-flex items-center justify-center gap-2 px-6 py-3.5 font-semibold text-white rounded-md overflow-hidden group"
-              style={{ background: '#25D366' }}
+              className="relative inline-flex items-center justify-center gap-2 px-6 py-3.5 font-semibold text-white rounded-md bg-[#25D366] hover:bg-[#1faa54] transition-colors shadow-lg shadow-[#25D366]/40 hover:shadow-xl hover:shadow-[#25D366]/50 hover:-translate-y-0.5"
             >
-              {/* Pulso animado */}
-              <span className="absolute inset-0 rounded-md bg-[#25D366] animate-ping opacity-30 group-hover:opacity-0" />
-              <span className="absolute inset-0 rounded-md bg-[#25D366] animate-pulse opacity-20 group-hover:opacity-0" />
-              <MessageCircle className="relative h-5 w-5" />
-              <span className="relative">Falar no WhatsApp</span>
+              {/* Pulso animado — contido dentro do botão */}
+              <span className="absolute inset-0 rounded-md animate-ping bg-[#25D366] opacity-20 pointer-events-none" style={{ animationDuration: '1.5s' }} />
+              <MessageCircle className="relative z-10 h-5 w-5" />
+              <span className="relative z-10">Falar no WhatsApp</span>
             </a>
           </div>
 

@@ -61,10 +61,11 @@ export default function Header() {
             href={whatsappLink()}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:inline-flex items-center gap-2 rounded-md bg-bosch-red px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-bosch-red/30 hover:bg-bosch-red-dark hover:shadow-lg transition-all"
+            className="hidden lg:inline-flex relative items-center gap-2 rounded-md bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-[#25D366]/40 hover:bg-[#1faa54] hover:shadow-lg transition-all"
           >
-            <MessageCircle className="h-4 w-4" />
-            Falar no WhatsApp
+            <span className="absolute inset-0 rounded-md animate-ping bg-[#25D366] opacity-20 pointer-events-none" style={{ animationDuration: '1.5s' }} />
+            <MessageCircle className="relative z-10 h-4 w-4" />
+            <span className="relative z-10">Falar no WhatsApp</span>
           </a>
 
           {/* Mobile Toggle */}
