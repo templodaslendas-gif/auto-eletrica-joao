@@ -240,6 +240,15 @@ export const config = {
   ],
 
   // ----------------------------------------------------------
+  //  FFR DO BRASIL — NÃO ALTERAR (config white-label)
+  // ----------------------------------------------------------
+  ffr: {
+    whatsapp: '5545999317831',
+    mensagem: (nomeEmpresa) =>
+      `Vim do site da ${nomeEmpresa}, quero falar com o responsável pelo site.`,
+  },
+
+  // ----------------------------------------------------------
   //  SEO
   // ----------------------------------------------------------
   seo: {

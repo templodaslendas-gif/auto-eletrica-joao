@@ -110,7 +110,7 @@ export default function Footer() {
           </p>
           {/* Crédito FFR — clicável, alinhado à esquerda no mobile para não colidir com botão WhatsApp */}
           <a
-            href="https://wa.me/5545999317831?text=Vim%20do%20site%20da%20Auto%20El%C3%A9trica%20e%20Mec%C3%A2nica%20do%20Jo%C3%A3o%2C%20quero%20falar%20com%20o%20respons%C3%A1vel%20pelo%20site."
+            href={`https://wa.me/${config.ffr.whatsapp}?text=${encodeURIComponent(config.ffr.mensagem(config.empresa.nome))}`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs text-white/40 hover:text-white/70 transition-colors flex items-center gap-1.5 self-start md:self-auto pr-20 md:pr-0"
