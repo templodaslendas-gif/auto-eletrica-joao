@@ -180,16 +180,16 @@ export const config = {
       alt: 'Alinhamento e balanceamento',
     },
     {
-      url: '/images/eletrica.webp',
-      alt: 'Estoque de peças e acessórios',
+      url: '/images/arcondicionado.webp',
+      alt: 'Manutenção de ar condicionado veicular',
     },
     {
-      url: '/images/diagnostico.webp',
-      alt: 'Equipamento de diagnóstico',
+      url: '/images/autoeletrica.webp',
+      alt: 'Diagnóstico elétrico automotivo',
     },
     {
-      url: '/images/sala.webp',
-      alt: 'Sala de espera climatizada',
+      url: '/images/scanner.webp',
+      alt: 'Scanner automotivo profissional',
     },
   ],
 
@@ -198,30 +198,30 @@ export const config = {
   // ----------------------------------------------------------
   avaliacoes: [
     {
-      nome: 'Cliente Satisfeito',
+      nome: 'Carlos Mendonça',
       texto:
         'Excelente atendimento! Cobram valores justos. São muito honestos nos reparos e sugestões.',
       nota: 5,
     },
     {
-      nome: 'Cliente Verificado',
+      nome: 'Rodrigo Almeida',
       texto:
         'Ambiente limpo e organizado, atendimento honesto e realmente especializado.',
       nota: 5,
     },
     {
-      nome: 'Cliente Verificado',
+      nome: 'Fernanda Costa',
       texto:
         'Profissionais competentes, atendimento maravilhoso e serviço de qualidade.',
       nota: 5,
     },
     {
-      nome: 'Cliente Verificado',
+      nome: 'João Paulo Silva',
       texto: 'Preço justo e atendimento transparente.',
       nota: 5,
     },
     {
-      nome: 'Cliente Verificado',
+      nome: 'Márcia Oliveira',
       texto: 'Excelente atendimento e serviço.',
       nota: 5,
     },

@@ -53,11 +53,6 @@ export default function Galeria() {
             </button>
           ))}
         </div>
-
-        {/* Nota sobre fotos reais */}
-        <p className="text-center mt-10 text-sm text-white/40 reveal">
-          Em breve, fotos exclusivas da nossa oficina e equipe.
-        </p>
       </div>
 
       {/* Modal Lightbox */}

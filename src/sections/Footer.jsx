@@ -108,9 +108,9 @@ export default function Footer() {
           <p className="text-xs text-white/50 text-center md:text-left">
             © {year} {config.empresa.nome}. Todos os direitos reservados.
           </p>
-          <p className="text-xs text-white/50 flex items-center gap-2">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-bosch-red animate-pulse-slow" />
-            {config.empresa.subBrand} — {config.empresa.cidade}/{config.empresa.estado}
+          <p className="text-xs text-white/40 flex items-center gap-2">
+            Desenvolvido por{' '}
+            <span className="text-bosch-red font-semibold">FFR do Brasil Tecnology</span>
           </p>
         </div>
       </div>
