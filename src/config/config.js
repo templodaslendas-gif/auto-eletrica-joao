@@ -77,9 +77,7 @@ export const config = {
     tituloDestaque: 'Qualidade Bosch',
     subtitulo:
       'Serviços automotivos especializados em mecânica, pneus, alinhamento, auto elétrica e manutenção completa em Marechal Cândido Rondon.',
-    // SUBSTITUIR pela foto real da oficina (use Unsplash agora como placeholder premium)
-    imagem:
-      'https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?auto=format&fit=crop&w=1920&q=80',
+    imagem: '/images/sobre.webp',
     provas: [
       'Honestidade nos reparos',
       'Equipe especializada',
@@ -99,8 +97,7 @@ export const config = {
       descricao:
         'Reparo de motor, suspensão, freios, transmissão e lubrificação completa.',
       itens: ['Reparo de motor', 'Suspensão', 'Freios', 'Transmissão', 'Lubrificação'],
-      imagem:
-        'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80',
+      imagem: '/images/motoraberto.webp',
     },
     {
       id: 'auto-eletrica',
@@ -109,8 +106,7 @@ export const config = {
       descricao:
         'Diagnóstico elétrico computadorizado, bateria, velas e motor de partida.',
       itens: ['Diagnóstico elétrico', 'Bateria', 'Reparos elétricos', 'Velas', 'Motor de partida'],
-      imagem:
-        'https://images.unsplash.com/photo-1632823471565-1ecdf5c6da77?auto=format&fit=crop&w=800&q=80',
+      imagem: '/images/eletrica.webp',
     },
     {
       id: 'pneus',
@@ -119,8 +115,7 @@ export const config = {
       descricao:
         'Alinhamento, balanceamento e venda de pneus para todos os modelos.',
       itens: ['Alinhamento', 'Balanceamento', 'Pneus'],
-      imagem:
-        'https://images.unsplash.com/photo-1605164599901-db7f68c4b1ed?auto=format&fit=crop&w=800&q=80',
+      imagem: '/images/pneus.webp',
     },
     {
       id: 'ar-condicionado',
@@ -129,28 +124,25 @@ export const config = {
       descricao:
         'Manutenção, troca de filtros, reparo e instalação de sistema completo.',
       itens: ['Manutenção', 'Troca de filtros', 'Reparo e instalação'],
-      imagem:
-        'https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=800&q=80',
+      imagem: '/images/diagnostico.webp',
     },
     {
       id: 'diagnostico',
-      titulo: 'Diagnóstico Bosch',
+      titulo: 'Diagnóstico Especializado',
       icone: 'ScanLine',
       descricao:
-        'Scanner Bosch para diagnóstico veicular completo e identificação precisa de falhas.',
-      itens: ['Scanner Bosch', 'Diagnóstico computadorizado', 'Análise de falhas'],
-      imagem:
-        'https://images.unsplash.com/photo-1530046339915-78e95b5b34a6?auto=format&fit=crop&w=800&q=80',
+        'Equipamentos modernos para diagnóstico veicular completo e identificação precisa de falhas.',
+      itens: ['Diagnóstico computadorizado', 'Análise de falhas', 'Manutenção de câmbio automático'],
+      imagem: '/images/diagnostico.webp',
     },
     {
       id: 'outros',
-      titulo: 'Outros Serviços',
+      titulo: 'Peças e Acessórios',
       icone: 'ShieldCheck',
       descricao:
-        'Serviços de emergência, diagnóstico veicular e vidros automotivos.',
-      itens: ['Serviços de emergência', 'Diagnóstico veicular', 'Vidros automotivos'],
-      imagem:
-        'https://images.unsplash.com/photo-1599256871679-1ce8e8b3a02e?auto=format&fit=crop&w=800&q=80',
+        'Estoque completo de peças e acessórios das melhores marcas para seu veículo.',
+      itens: ['Peças originais', 'Acessórios automotivos', 'Marcas de qualidade'],
+      imagem: '/images/eletrica.webp',
     },
   ],
 
@@ -168,8 +160,7 @@ export const config = {
       'Sala de espera climatizada',
       'Atendimento transparente',
     ],
-    imagem:
-      'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1200&q=80',
+    imagem: '/images/sobre.webp',
   },
 
   // ----------------------------------------------------------
@@ -177,28 +168,28 @@ export const config = {
   // ----------------------------------------------------------
   galeria: [
     {
-      url: 'https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?auto=format&fit=crop&w=800&q=80',
-      alt: 'Oficina mecânica profissional',
+      url: '/images/sobre.webp',
+      alt: 'Oficina Auto Elétrica João — interior',
     },
     {
-      url: 'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=800&q=80',
-      alt: 'Mecânico trabalhando',
+      url: '/images/pneus.webp',
+      alt: 'Estoque de pneus',
     },
     {
-      url: 'https://images.unsplash.com/photo-1605164599901-db7f68c4b1ed?auto=format&fit=crop&w=800&q=80',
-      alt: 'Serviço de pneus',
+      url: '/images/motoraberto.webp',
+      alt: 'Alinhamento e balanceamento',
     },
     {
-      url: 'https://images.unsplash.com/photo-1632823471565-1ecdf5c6da77?auto=format&fit=crop&w=800&q=80',
-      alt: 'Reparo elétrico',
+      url: '/images/eletrica.webp',
+      alt: 'Estoque de peças e acessórios',
     },
     {
-      url: 'https://images.unsplash.com/photo-1530046339915-78e95b5b34a6?auto=format&fit=crop&w=800&q=80',
-      alt: 'Scanner automotivo Bosch',
+      url: '/images/diagnostico.webp',
+      alt: 'Equipamento de diagnóstico',
     },
     {
-      url: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80',
-      alt: 'Manutenção de motor',
+      url: '/images/sala.webp',
+      alt: 'Sala de espera climatizada',
     },
   ],
 
