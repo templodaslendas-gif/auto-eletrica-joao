@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Logo variant="light" />
             <p className="mt-5 text-white/70 text-sm leading-relaxed max-w-md">
-              {config.empresa.subBrand} em {config.empresa.cidade}. Serviços automotivos especializados com transparência, honestidade e qualidade Bosch.
+              {config.empresa.nome} — {config.empresa.subBrand} em {config.empresa.cidade}. Serviços automotivos especializados com transparência, honestidade e qualidade Bosch.
             </p>
 
             {config.contato.redes.facebook && (

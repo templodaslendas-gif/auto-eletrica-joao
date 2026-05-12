@@ -17,8 +17,8 @@ export default function Logo({ variant = 'light', compact = false }) {
 
       {!compact && (
         <div className="flex flex-col leading-tight">
-          <span className={`text-[15px] font-extrabold tracking-tight ${isDark ? 'text-bosch-graphite' : 'text-white'}`}>
-            Auto Elétrica e Mecânica
+          <span className={`text-[14px] font-extrabold tracking-tight leading-tight ${isDark ? 'text-bosch-graphite' : 'text-white'}`}>
+            Auto Elétrica e Mecânica do João
           </span>
           <span className={`text-[11px] font-semibold uppercase tracking-widest ${subColor}`}>
             {config.empresa.subBrand}
