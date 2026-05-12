@@ -124,7 +124,7 @@ export const config = {
       descricao:
         'Manutenção, troca de filtros, reparo e instalação de sistema completo.',
       itens: ['Manutenção', 'Troca de filtros', 'Reparo e instalação'],
-      imagem: '/images/diagnostico.webp',
+      imagem: '/images/arcondicionado.webp',
     },
     {
       id: 'diagnostico',
@@ -133,7 +133,7 @@ export const config = {
       descricao:
         'Equipamentos modernos para diagnóstico veicular completo e identificação precisa de falhas.',
       itens: ['Diagnóstico computadorizado', 'Análise de falhas', 'Manutenção de câmbio automático'],
-      imagem: '/images/diagnostico.webp',
+      imagem: '/images/scanner.webp',
     },
     {
       id: 'outros',
