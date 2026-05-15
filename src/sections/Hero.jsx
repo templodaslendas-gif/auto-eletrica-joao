@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="grain relative min-h-screen flex items-center overflow-hidden"
     >
       {/* Background image — sempre renderizado como fallback */}
       <div
@@ -41,7 +41,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-grid-pattern opacity-50" />
 
       {/* Linha vermelha vertical lateral (detalhe Bosch) */}
-      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-bosch-red via-bosch-red to-transparent" />
+      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-bosch-red via-bosch-red to-transparent z-10" />
 
       {/* Conteúdo */}
       <div className="container-app relative z-10 pt-32 pb-20">
@@ -58,7 +58,11 @@ export default function Hero() {
           <h1 className="font-extrabold text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight animate-fade-up">
             {config.hero.titulo}{' '}
             <span className="relative inline-block">
-              <span className="relative z-10 text-bosch-red">
+              {/* Texto com gradiente animado */}
+              <span
+                className="relative z-10 bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift"
+                style={{ backgroundImage: 'linear-gradient(90deg, #E2001A, #ff3a4a, #ff6060, #ff3a4a, #E2001A)' }}
+              >
                 {config.hero.tituloDestaque}
               </span>
               <span className="absolute bottom-1 left-0 right-0 h-3 bg-bosch-red/20 -z-0" />
@@ -66,12 +70,18 @@ export default function Hero() {
           </h1>
 
           {/* Subtítulo */}
-          <p className="mt-7 text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed animate-fade-up" style={{ animationDelay: '120ms' }}>
+          <p
+            className="mt-7 text-lg md:text-xl text-white/80 max-w-2xl leading-relaxed animate-fade-up"
+            style={{ animationDelay: '120ms' }}
+          >
             {config.hero.subtitulo}
           </p>
 
           {/* CTAs */}
-          <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-up" style={{ animationDelay: '240ms' }}>
+          <div
+            className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-up"
+            style={{ animationDelay: '240ms' }}
+          >
             <a
               href={whatsappLink(config.whatsapp.mensagemOrcamento)}
               target="_blank"
@@ -85,16 +95,22 @@ export default function Hero() {
               href={whatsappLink()}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative inline-flex items-center justify-center gap-2 px-6 py-3.5 font-semibold text-white rounded-md bg-[#25D366] hover:bg-[#1faa54] transition-colors shadow-lg shadow-[#25D366]/40 hover:shadow-xl hover:shadow-[#25D366]/50 hover:-translate-y-0.5"
+              className="relative inline-flex items-center justify-center gap-2 px-6 py-3.5 font-semibold text-white rounded-md bg-[#25D366] hover:bg-[#1faa54] transition-colors shadow-lg shadow-[#25D366]/40 hover:shadow-xl hover:shadow-[#25D366]/50 hover:-translate-y-0.5 overflow-hidden"
             >
-              <span className="absolute inset-0 rounded-md animate-ping bg-[#25D366] opacity-20 pointer-events-none" style={{ animationDuration: '1.5s' }} />
+              <span
+                className="absolute inset-0 rounded-md animate-ping bg-[#25D366] opacity-20 pointer-events-none"
+                style={{ animationDuration: '1.5s' }}
+              />
               <MessageCircle className="relative z-10 h-5 w-5" />
               <span className="relative z-10">Falar no WhatsApp</span>
             </a>
           </div>
 
           {/* Provas (mini badges) */}
-          <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-3 animate-fade-up" style={{ animationDelay: '360ms' }}>
+          <div
+            className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-3 animate-fade-up"
+            style={{ animationDelay: '360ms' }}
+          >
             {config.hero.provas.map((prova) => (
               <div key={prova} className="flex items-center gap-2 text-sm text-white/85">
                 <CheckCircle2 className="h-4 w-4 text-bosch-red flex-shrink-0" />

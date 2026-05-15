@@ -1,3 +1,4 @@
+import { useRef } from 'react'
 import {
   ArrowRight,
   Wrench,
@@ -10,6 +11,33 @@ import {
 import { config, whatsappLink } from '../config/config'
 
 const ICONS = { Wrench, Zap, Disc3, Snowflake, ScanLine, ShieldCheck }
+
+function TiltCard({ children, className, style }) {
+  const ref = useRef(null)
+
+  const onMove = (e) => {
+    const el = ref.current
+    if (!el) return
+    const r = el.getBoundingClientRect()
+    const x = ((e.clientX - r.left) / r.width  - 0.5) * 10
+    const y = ((e.clientY - r.top)  / r.height - 0.5) * -10
+    el.style.transform  = `perspective(900px) rotateX(${y}deg) rotateY(${x}deg) translateZ(14px)`
+    el.style.transition = 'transform 0.08s linear'
+  }
+
+  const onLeave = () => {
+    const el = ref.current
+    if (!el) return
+    el.style.transform  = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateZ(0)'
+    el.style.transition = 'transform 0.55s ease-out'
+  }
+
+  return (
+    <div ref={ref} className={className} style={style} onMouseMove={onMove} onMouseLeave={onLeave}>
+      {children}
+    </div>
+  )
+}
 
 export default function Servicos() {
   return (
@@ -30,15 +58,15 @@ export default function Servicos() {
           </p>
         </div>
 
-        {/* Grid de cards */}
+        {/* Grid de cards com tilt 3D */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {config.servicos.map((servico, idx) => {
             const Icon = ICONS[servico.icone] || Wrench
 
             return (
-              <div
+              <TiltCard
                 key={servico.id}
-                className="group bg-white rounded-xl overflow-hidden shadow-md card-hover reveal"
+                className="group bg-white rounded-xl overflow-hidden shadow-md reveal"
                 style={{ transitionDelay: `${idx * 80}ms` }}
               >
                 {/* Imagem */}
@@ -68,7 +96,6 @@ export default function Servicos() {
                     {servico.descricao}
                   </p>
 
-                  {/* Itens */}
                   <ul className="mt-4 space-y-1.5">
                     {servico.itens.slice(0, 4).map((item) => (
                       <li key={item} className="flex items-center gap-2 text-sm text-bosch-graphite">
@@ -78,7 +105,6 @@ export default function Servicos() {
                     ))}
                   </ul>
 
-                  {/* CTA */}
                   <a
                     href={whatsappLink(config.whatsapp.mensagemServico(servico.titulo))}
                     target="_blank"
@@ -89,7 +115,7 @@ export default function Servicos() {
                     <ArrowRight className="h-4 w-4 transition-transform group-hover/cta:translate-x-1" />
                   </a>
                 </div>
-              </div>
+              </TiltCard>
             )
           })}
         </div>

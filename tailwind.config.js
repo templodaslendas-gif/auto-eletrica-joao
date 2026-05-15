@@ -24,6 +24,9 @@ export default {
         'fade-up': 'fadeUp 0.7s ease-out forwards',
         'fade-in': 'fadeIn 0.6s ease-out forwards',
         'pulse-slow': 'pulse 3s ease-in-out infinite',
+        'marquee': 'marquee 28s linear infinite',
+        'gradient-shift': 'gradientShift 3s ease-in-out infinite',
+        'loader-bar': 'loaderBar 1.15s ease-out forwards',
       },
       keyframes: {
         fadeUp: {
@@ -33,6 +36,18 @@ export default {
         fadeIn: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
+        },
+        marquee: {
+          from: { transform: 'translateX(0)' },
+          to:   { transform: 'translateX(-50%)' },
+        },
+        gradientShift: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%':       { backgroundPosition: '100% 50%' },
+        },
+        loaderBar: {
+          '0%':   { width: '0%' },
+          '100%': { width: '100%' },
         },
       },
       backgroundImage: {

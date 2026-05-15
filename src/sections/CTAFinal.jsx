@@ -3,7 +3,7 @@ import { config, whatsappLink, telefoneLink } from '../config/config'
 
 export default function CTAFinal() {
   return (
-    <section className="relative py-24 md:py-32 overflow-hidden">
+    <section className="grain relative py-24 md:py-32 overflow-hidden">
       {/* Background image fixo */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"

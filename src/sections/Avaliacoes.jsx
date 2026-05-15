@@ -2,6 +2,9 @@ import { Star, Quote } from 'lucide-react'
 import { config } from '../config/config'
 
 export default function Avaliacoes() {
+  // Duplica os cards para loop infinito sem salto
+  const cards = [...config.avaliacoes, ...config.avaliacoes]
+
   return (
     <section id="avaliacoes" className="section-padding bg-white relative overflow-hidden">
       {/* Background decorativo */}
@@ -23,44 +26,45 @@ export default function Avaliacoes() {
               ))}
             </div>
             <span className="text-sm font-bold text-bosch-graphite">5.0 / 5.0</span>
-            <span className="text-xs text-bosch-gray">
-              Avaliações reais de clientes
-            </span>
+            <span className="text-xs text-bosch-gray">Avaliações reais de clientes</span>
           </div>
         </div>
+      </div>
 
-        {/* Grid de avaliações */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {config.avaliacoes.map((avaliacao, idx) => (
+      {/* Marquee — ocupa largura total (fora do container) */}
+      <div className="relative overflow-hidden mt-2 pb-4">
+        {/* Máscaras de fade nas laterais */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-white to-transparent" />
+
+        <div
+          className="flex animate-marquee hover:[animation-play-state:paused]"
+          style={{ width: 'max-content' }}
+        >
+          {cards.map((avaliacao, idx) => (
             <div
               key={idx}
-              className="group relative bg-white rounded-xl p-7 shadow-md border border-bosch-gray-light hover:border-bosch-red/30 hover:shadow-xl transition-all duration-500 reveal"
-              style={{ transitionDelay: `${idx * 80}ms` }}
+              className="group relative bg-white rounded-xl p-7 shadow-md border border-bosch-gray-light hover:border-bosch-red/30 hover:shadow-xl transition-all duration-500 mr-6 flex-shrink-0"
+              style={{ width: '320px' }}
             >
-              {/* Ícone de aspas */}
               <Quote className="absolute top-5 right-5 h-8 w-8 text-bosch-red/15 group-hover:text-bosch-red/30 transition-colors" />
 
-              {/* Estrelas */}
               <div className="flex items-center gap-0.5 mb-4">
                 {[...Array(avaliacao.nota)].map((_, i) => (
                   <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
                 ))}
               </div>
 
-              {/* Texto */}
-              <p className="text-bosch-graphite leading-relaxed mb-6 relative z-10">
+              <p className="text-bosch-graphite leading-relaxed mb-6 relative z-10 text-sm">
                 "{avaliacao.texto}"
               </p>
 
-              {/* Autor */}
               <div className="flex items-center gap-3 pt-4 border-t border-bosch-gray-light">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-bosch-blue-deep text-white font-bold text-sm">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-bosch-blue-deep text-white font-bold text-sm flex-shrink-0">
                   {avaliacao.nome.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-semibold text-sm text-bosch-graphite">
-                    {avaliacao.nome}
-                  </p>
+                  <p className="font-semibold text-sm text-bosch-graphite">{avaliacao.nome}</p>
                   <p className="text-xs text-bosch-gray">Google Reviews</p>
                 </div>
               </div>
