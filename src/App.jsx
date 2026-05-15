@@ -11,8 +11,10 @@ import CTAFinal from './sections/CTAFinal'
 import Contato from './sections/Contato'
 import Footer from './sections/Footer'
 import { useReveal } from './hooks/useReveal'
+import { useSEO } from './hooks/useSEO'
 
 export default function App() {
+  useSEO()
   useReveal()
 
   return (

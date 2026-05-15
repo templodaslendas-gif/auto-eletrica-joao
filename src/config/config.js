@@ -259,8 +259,7 @@ export const config = {
     keywords:
       'mecânica Marechal Rondon, auto elétrica Marechal Rondon, Bosch Car Service Marechal Rondon, alinhamento e balanceamento, oficina mecânica Marechal Rondon',
     url: 'https://autoeletricajoao.com.br',
-    imagemOg:
-      'https://images.unsplash.com/photo-1632823469850-2f77dd9c7f93?auto=format&fit=crop&w=1200&q=80',
+    imagemOg: 'https://autoeletricajoao.com.br/images/sobre.webp',
   },
 }
 
