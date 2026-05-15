@@ -1,6 +1,7 @@
 import Header from './components/Header'
 import WhatsAppFloat from './components/WhatsAppFloat'
 import Hero from './sections/Hero'
+import Contadores from './sections/Contadores'
 import Servicos from './sections/Servicos'
 import Sobre from './sections/Sobre'
 import Galeria from './sections/Galeria'
@@ -19,6 +20,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
+        <Contadores />
         <Servicos />
         <Sobre />
         <Galeria />

@@ -91,12 +91,15 @@ export default function Contato() {
                     Horário de Funcionamento
                   </p>
                   <div className="mt-2 space-y-1">
-                    {config.contato.horarios.map((h) => (
-                      <div key={h.dias} className="flex justify-between text-sm">
-                        <span className="font-semibold">{h.dias}</span>
-                        <span className="text-white/80">{h.horario}</span>
-                      </div>
-                    ))}
+                    {config.contato.horarios.map((h) => {
+                      const fechado = h.horario.toLowerCase() === 'fechado'
+                      return (
+                        <div key={h.dias} className="flex justify-between text-sm">
+                          <span className={`font-semibold ${fechado ? 'text-white/50' : ''}`}>{h.dias}</span>
+                          <span className={fechado ? 'text-bosch-red font-semibold' : 'text-white/80'}>{h.horario}</span>
+                        </div>
+                      )
+                    })}
                   </div>
                 </div>
               </div>

@@ -116,7 +116,7 @@ export default function Footer() {
           >
             Desenvolvido por{' '}
             <span className="text-bosch-red font-semibold hover:text-red-400 transition-colors">
-              FFR do Brasil Tecnology
+              FFR do Brasil Tecnologia
             </span>
           </a>
         </div>

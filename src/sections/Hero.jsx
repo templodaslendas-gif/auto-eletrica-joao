@@ -1,17 +1,39 @@
+import { useState } from 'react'
 import { MessageCircle, FileText, CheckCircle2 } from 'lucide-react'
 import { config, whatsappLink } from '../config/config'
 
 export default function Hero() {
+  const [videoError, setVideoError] = useState(false)
+
   return (
     <section
       id="inicio"
       className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Background com parallax via bg-fixed (performático, sem JS) */}
+      {/* Background image — sempre renderizado como fallback */}
       <div
         className="absolute inset-0 bg-cover bg-center md:bg-fixed"
         style={{ backgroundImage: `url(${config.hero.imagem})` }}
       />
+
+      {/* Vídeo de fundo — cobre a imagem se carregar com sucesso */}
+      {!videoError && (
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 h-full w-full object-cover"
+          onError={() => setVideoError(true)}
+        >
+          <source
+            src="/videos/hero.mp4"
+            type="video/mp4"
+            onError={() => setVideoError(true)}
+          />
+        </video>
+      )}
 
       {/* Overlay multi-camadas para profundidade */}
       <div className="absolute inset-0 bg-gradient-to-r from-bosch-graphite via-bosch-graphite/85 to-bosch-graphite/40" />
@@ -65,7 +87,6 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="relative inline-flex items-center justify-center gap-2 px-6 py-3.5 font-semibold text-white rounded-md bg-[#25D366] hover:bg-[#1faa54] transition-colors shadow-lg shadow-[#25D366]/40 hover:shadow-xl hover:shadow-[#25D366]/50 hover:-translate-y-0.5"
             >
-              {/* Pulso animado — contido dentro do botão */}
               <span className="absolute inset-0 rounded-md animate-ping bg-[#25D366] opacity-20 pointer-events-none" style={{ animationDuration: '1.5s' }} />
               <MessageCircle className="relative z-10 h-5 w-5" />
               <span className="relative z-10">Falar no WhatsApp</span>

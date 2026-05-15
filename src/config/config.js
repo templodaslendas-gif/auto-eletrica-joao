@@ -20,7 +20,7 @@ export const config = {
     cidade: 'Marechal Cândido Rondon',
     estado: 'PR',
     cnpj: '', // opcional, deixe vazio para esconder
-    anoFundacao: null,
+    anoFundacao: 2009,
   },
 
   // ----------------------------------------------------------

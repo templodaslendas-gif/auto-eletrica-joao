@@ -103,7 +103,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="mt-6 inline-flex items-center justify-center gap-2 rounded-md bg-bosch-red px-6 py-4 font-semibold text-white"
+            className="mt-6 inline-flex items-center justify-center gap-2 rounded-md bg-[#25D366] hover:bg-[#1faa54] transition-colors px-6 py-4 font-semibold text-white"
           >
             <MessageCircle className="h-5 w-5" />
             Falar no WhatsApp

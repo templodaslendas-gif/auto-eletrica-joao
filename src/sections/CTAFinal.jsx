@@ -7,10 +7,7 @@ export default function CTAFinal() {
       {/* Background image fixo */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-fixed"
-        style={{
-          backgroundImage:
-            'url(https://images.unsplash.com/photo-1530046339915-78e95b5b34a6?auto=format&fit=crop&w=1920&q=80)',
-        }}
+        style={{ backgroundImage: 'url(/images/sobre.webp)' }}
       />
       <div className="absolute inset-0 bg-gradient-to-r from-bosch-blue-deep/95 to-bosch-graphite/90" />
       <div className="absolute inset-0 bg-grid-pattern opacity-50" />

@@ -1,9 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { X, ZoomIn } from 'lucide-react'
 import { config } from '../config/config'
 
 export default function Galeria() {
   const [selected, setSelected] = useState(null)
+
+  useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') setSelected(null) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
 
   return (
     <section className="section-padding bg-bosch-graphite relative overflow-hidden">
